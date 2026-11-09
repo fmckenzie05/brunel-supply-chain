@@ -1,6 +1,6 @@
 -- Brunel Supply Chain: KPI views
 -- Run AFTER clean_brunel.sql, in psql connected to supply_chain:
---   \i 'C:/Users/ferna/OneDrive/Documents/Postgres/Brunel_Supply_Chain/kpi_brunel.sql'
+--   \i '/path/to/Brunel_Supply_Chain/kpi_brunel.sql'
 --
 -- Builds schema "kpi" with views (Tableau / Excel can connect to these directly):
 --   kpi.order_costs       one row per order with freight + warehouse cost

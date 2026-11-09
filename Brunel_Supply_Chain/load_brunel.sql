@@ -3,7 +3,7 @@
 --   https://doi.org/10.17633/rd.brunel.7558679.v2
 --
 -- Run in psql (SQL Shell), connected to any database:
---   \i 'C:/Users/ferna/OneDrive/Documents/Postgres/Brunel_Supply_Chain/load_brunel.sql'
+--   \i '/path/to/Brunel_Supply_Chain/load_brunel.sql'
 -- Note: \copy, \c, \cd and \gexec are psql commands. This will NOT run
 -- in pgAdmin's Query Tool; use psql or pgAdmin's PSQL Tool.
 
@@ -14,7 +14,7 @@ SELECT 'CREATE DATABASE supply_chain'
 WHERE NOT EXISTS (SELECT 1 FROM pg_database WHERE datname = 'supply_chain')\gexec
 \c supply_chain
 
-\cd 'C:/Users/ferna/OneDrive/Documents/Postgres/Brunel_Supply_Chain'
+\cd '/path/to/Brunel_Supply_Chain'
 
 BEGIN;
 

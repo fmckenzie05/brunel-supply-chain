@@ -1,6 +1,6 @@
 -- Brunel Supply Chain: cleanup layer
 -- Run AFTER load_brunel.sql (or load_data_only.sql), in psql connected to supply_chain:
---   \i 'C:/Users/ferna/OneDrive/Documents/Postgres/Brunel_Supply_Chain/clean_brunel.sql'
+--   \i '/path/to/Brunel_Supply_Chain/clean_brunel.sql'
 --
 -- Raw tables in schema "brunel" are left untouched. Cleaned tables go to schema "clean".
 -- Safe to re-run: it drops and rebuilds the clean schema each time.
