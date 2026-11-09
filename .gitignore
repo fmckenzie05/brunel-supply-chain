@@ -1,0 +1,12 @@
+# Exclude local PostgreSQL data directory
+Postgres/
+postgres/
+
+# Exclude unrelated datasets
+datagov_supply_chain_greenhouse_gas_emission_factor_v1.3_naics_6/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
