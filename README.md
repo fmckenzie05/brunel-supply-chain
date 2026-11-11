@@ -108,18 +108,23 @@ Every KPI was recalculated independently with DAX queries against the live model
 
 ---
 
-## Report Pages
+## Featured Dashboards
 
-| # | Page | Question answered |
-|---|---|---|
-| 1 | Executive Overview | What's the story in one screen? Headline, three insight cards, supporting charts |
-| 2 | Delivery Performance | Where are we late, and why? On-time and early rates by plant, carrier, service, mode |
-| 3 | Cost Analysis | Where does the money go? Freight vs warehouse, $/kg by carrier, $/unit by plant |
-| 4 | Customer View | Who drives volume and cost? Top customers, CRF share, concentration |
-| 5 | Findings & Recommendations | What should the business do? |
-| 6 | Data & Methods | Sources, definitions, assumptions |
+### Executive Summary
+*What's the story in one screen?*
+Headline and three insight cards (On-Time Rate, Warehouse Share of Cost, Zero Freight Orders), with supporting charts: warehouse cost by plant, on-time rate by carrier, and freight cost per kg by service level.
 
-**Interactivity:** synced slicers for Plant, Customer, Carrier, Service Level, and Mode. Cross-filtering between charts.
+### Delivery Performance
+*Where are we late, and why?*
+On-time, shipped-early, days-late and transit KPIs, with on-time rate by plant and service level, shipped-early rate by mode, and an on-time matrix for each carrier and service level.
+
+### Cost Analysis
+*Where does the money go?*
+Warehouse vs freight spend and unit economics: warehouse cost per unit by plant, each plant's share of warehouse cost, freight cost per kg by carrier (paid shipments only), and freight cost by mode.
+
+The report also has deeper-dive pages on late orders, plants, carriers, customers, CRF shipments, lanes and products.
+
+**Interactivity:** synced slicers for Plant, Carrier and Service Level. Cross-filtering between charts.
 
 ---
 
@@ -149,8 +154,7 @@ Brunel_Supply_Chain/
 └── WhCosts.csv
 
 powerbi_dashboards/
-├── brunel_kpi.pbix              # Working report
-└── brunel_kpi_layout_v2.pbix   # Presentation layout
+└── brunel_kpi_layout_v1.pbix   # Power BI report
 ```
 
 ---
@@ -158,6 +162,6 @@ powerbi_dashboards/
 ## How to Open
 
 1. Install [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free, Windows).
-2. Open `brunel_kpi_layout_v2.pbix`.
+2. Open `powerbi_dashboards/brunel_kpi_layout_v1.pbix`.
 3. Data is imported into the file — no live database connection needed to view it.
 4. To refresh: point the data source at a PostgreSQL instance with the `kpi` views loaded.
