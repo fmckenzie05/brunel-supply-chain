@@ -112,17 +112,23 @@ Every KPI was recalculated independently with DAX queries against the live model
 
 ### Executive Summary
 *What's the story in one screen?*
-Headline and three insight cards (On-Time Rate, Warehouse Share of Cost, Zero Freight Orders), with supporting charts: warehouse cost by plant, on-time rate by carrier, and freight cost per kg by service level.
+Three insight cards (97.9% on-time, 99.6% of logistics cost is warehousing, 2,217 zero-freight orders) with supporting charts. PLANT03 alone carries $14.8M of warehouse cost.
 
-### Delivery Performance
-*Where are we late, and why?*
-On-time, shipped-early, days-late and transit KPIs, with on-time rate by plant and service level, shipped-early rate by mode, and an on-time matrix for each carrier and service level.
+![Executive Summary](images/executive_summary.png)
 
 ### Cost Analysis
 *Where does the money go?*
 Warehouse vs freight spend and unit economics: warehouse cost per unit by plant, each plant's share of warehouse cost, freight cost per kg by carrier (paid shipments only), and freight cost by mode.
 
-The report also has deeper-dive pages on late orders, plants, carriers, customers, CRF shipments, lanes and products.
+![Cost Analysis](images/cost_analysis.png)
+
+### Late Orders
+*Who ships late, and by how much?*
+Filtered to the 192 late orders: 174 of them come from PLANT03, and carrier V444_1 averages 3 days late against 1.9 for V444_0. Includes an order-level detail table.
+
+![Late Orders](images/late_orders.png)
+
+The report also has pages on delivery performance, plants, carriers, customers, CRF shipments, lanes and products.
 
 **Interactivity:** synced slicers for Plant, Carrier and Service Level. Cross-filtering between charts.
 
@@ -155,6 +161,8 @@ Brunel_Supply_Chain/
 
 powerbi_dashboards/
 └── brunel_kpi_layout_v1.pbix   # Power BI report
+
+images/                          # Dashboard screenshots used in this README
 ```
 
 ---
